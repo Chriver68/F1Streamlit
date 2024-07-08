@@ -25,9 +25,9 @@ class MultiApp:
         })
 
     def run():
-        app = option_menu(None, ["F1", "Football", 'Contact'],
+        app = option_menu(None, ["F1", "Eredivisie", 'Contact'],
                            menu_icon="cast",default_index=0, orientation="horizontal")
-        if app =='Football':
+        if app =='Eredivisie':
             football.app()
         if app == 'F1':
             f1.app()

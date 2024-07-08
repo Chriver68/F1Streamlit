@@ -114,7 +114,7 @@ def app():
     totaal_punten = totaal_punten.sort_values(by=['grouped_points'], ascending=False)
 
     fig = px.bar(totaal_punten, x='team', y='grouped_points', text='team', color='team')
-    fig = fig.update_layout(autosize=False, width=800, height=800, bargap=0.0, bargroupgap=0.0,
+    fig = fig.update_layout(autosize=False, width=800, height=1100, bargap=0.0, bargroupgap=0.0,
                             yaxis={'visible': True, 'showticklabels': True},
                             xaxis={'visible': True, 'showticklabels': False})
 
@@ -122,9 +122,10 @@ def app():
     fig2 = fig2.update_layout(yaxis={'visible': False, 'showticklabels': False},
                               autosize=False,
                               width=2000,
-                              height=700, )
+                              height=1000, )
 
-    col1, col2 = st.columns([1,3])
-    col2.title('Season 2023/2024.')
-    col1.write(fig)
-    col2.write(fig2)
+    col1, col2, col3 = st.columns([1,1,1])
+    col2.title('Eredivisie Season 2023/2024.')
+    col5, col4 = st.columns([1,2])
+    col5.write(fig)
+    col4.write(fig2)
